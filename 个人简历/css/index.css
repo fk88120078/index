@@ -1,0 +1,1374 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+html,body,.container,.saosao{
+    width:100%;
+    height:100%;
+     position: relative;
+    overflow: hidden;
+}
+/*隐藏 以达到移动到当前屏幕再去除隐藏而实现动画效果。*/
+/*向上*/
+.pageUp {
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+/*向下*/
+.pageDown {
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.hide {
+    display: none;
+}
+.page{/*需要定位刀一个层上*/
+      width: 100%;
+      height: 100%;
+      transition: all 300ms linear;/*滑动动画效果*/
+      position:absolute;
+      top:0;
+      left:0;
+}
+.page>div{
+        -moz-animation: namen  0.8s;
+        -o-animation: namen  0.8s;
+        -webkit-animation: namen 0.8s;
+        animation: namen 0.8s;
+    }
+@keyframes namen {
+    0%{
+       opacity:0;
+    }
+
+    90% {
+      opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+/*图标转圈*/
+.music {
+    width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    z-index: 9999;
+    right: 2%;
+    top: 2%;
+    background-image: url('../img/bgmBtn-fbd2dc.svg');
+    background-size: cover;
+    -moz-animation: yy 5s linear infinite;
+    -o-animation: yy 5s linear infinite;
+    -webkit-animation: yy 5s linear infinite;
+    animation: yy 5s linear infinite;
+}
+ /*转圈*/
+@keyframes yy {
+    from {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    }
+
+    to {
+       -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    }
+}
+@-moz-keyframes yy {
+      from {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    }
+
+    to {
+       -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    }
+}
+@-webkit-keyframes yy {
+      from {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    }
+
+    to {
+       -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    }
+}
+audio{
+    display:none;
+}
+/*上下动图标*/
+#jiaobiao{
+     -moz-animation: sxd 0.7s linear infinite;
+    -o-animation: sxd 1.7s linear infinite;
+    -webkit-animation: sxd 0.7s linear infinite;
+    animation: sxd 0.7s linear infinite;
+    width:0.5rem;
+    height:0.28rem;
+    bottom:5%;
+    left:46%;
+}
+
+/*音乐脚标*/
+.saosao{
+    background-color:#000;
+}/*扫码*/
+.saosao img{
+    position:absolute;
+}
+.saosao>img:nth-of-type(1){
+    width:2.60rem;
+    height:2.60rem;
+    top:35%;
+    left:30%;
+}
+.saosao>img:nth-of-type(2){
+    width:2.50rem;
+    height:2.50rem;
+    top:50%;
+    left:31%; 
+    opacity:0;
+}
+.saodong {
+    -moz-animation: saosao 2s linear both;
+    -o-animation: saosao 2s linear both;
+    -webkit-animation: saosao 2s linear both;
+    animation: saosao 2s linear both;
+}
+/*第一页*/
+.page img{
+    position:absolute;
+}
+.page{
+     background-image: url('../img/bg.png');
+    background-size: cover;
+}
+.page:nth-of-type(1),.page:nth-of-type(2) {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.page:nth-of-type(1) img:nth-of-type(1) {
+        width: 130%;
+        height: auto;
+        top: -25%;
+        left: -14%;
+        z-index: 2;
+        opacity:0;
+        -moz-animation: sd 1s 3s linear infinite;
+        -o-animation: sd 1s 3s linear infinite;
+        -webkit-animation: sd 1s 3s linear infinite;
+        animation: sd 1s 3s linear infinite;
+    }
+/*图放大*/
+.page:nth-of-type(1) img:nth-of-type(2),.page:nth-of-type(2) img:nth-of-type(2),.page:nth-of-type(3) img:nth-of-type(2)
+,.page:nth-of-type(4) img:nth-of-type(2),.page:nth-of-type(5) img:nth-of-type(2)
+,.page:nth-of-type(6) img:nth-of-type(2),.page:nth-of-type(7) img:nth-of-type(2) 
+,.page:nth-of-type(8) img:nth-of-type(2){
+        width: 100%;
+        height: 100%;
+        -moz-animation: bgsd 3s linear both;
+        -o-animation: bgsd 3s linear both;
+        -webkit-animation: bgsd 3s linear both;
+        animation: bgsd 3s linear both;
+       
+    }
+.page:nth-of-type(1) img:nth-of-type(3) {
+        width: 3rem;
+        height: 3rem;
+        top: -5%;
+        left: -20%;
+        -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+    }
+.page:nth-of-type(1) img:nth-of-type(4) {
+        width: 3rem;
+        height: 3rem;
+        top: -15%;
+        right: -30%;
+        -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+    }
+.page:nth-of-type(1) img:nth-of-type(5){
+    width:2rem;
+    height:0.02rem;
+    top:45%;
+    left:0;
+     -moz-animation: left_rg2 3s linear;
+        -o-animation: left_rg2 3s linear;
+        -webkit-animation: left_rg2 3s linear;
+        animation: left_rg2 3s linear;
+}
+.page:nth-of-type(1) img:nth-of-type(6){
+    width:1.7rem;
+    height:0.02rem;
+    top:48%;
+    left:0;
+    left:4%;
+     -moz-animation: left_rg2 3s linear;
+        -o-animation: left_rg2 3s linear;
+        -webkit-animation: left_rg2 3s linear;
+        animation: left_rg2 3s linear;
+}
+.page:nth-of-type(1) img:nth-of-type(7){
+    width:1.4rem;
+    height:0.02rem;
+    top:51%;
+     left:8%;
+      -moz-animation: left_rg2 3s linear;
+        -o-animation: left_rg2 3s linear;
+        -webkit-animation: left_rg2 3s linear;
+        animation: left_rg2 3s linear;
+}
+.page:nth-of-type(1) img:nth-of-type(8) {
+        width: 2rem;
+        height: 0.02rem;
+        top: 45%;
+        right: 0;
+        -moz-animation: left_rg1 3s linear;
+        -o-animation: left_rg1 3s linear;
+        -webkit-animation: left_rg1 3s linear;
+        animation: left_rg1 3s linear;
+    }
+.page:nth-of-type(1) img:nth-of-type(9){
+    width:1.7rem;
+    height:0.02rem;
+    top:48%;
+    right:4%;
+      -moz-animation: left_rg1 3s linear;
+        -o-animation: left_rg1 3s linear;
+        -webkit-animation: left_rg1 3s linear;
+        animation: left_rg1 3s linear;
+}
+.page:nth-of-type(1) img:nth-of-type(10){
+    width:1.4rem;
+    height:0.02rem;
+    top:51%;
+    right:8%;
+      -moz-animation: left_rg1 3s linear;
+        -o-animation: left_rg1 3s linear;
+        -webkit-animation: left_rg1 3s linear;
+        animation: left_rg1 3s linear;
+}
+.page:nth-of-type(1) img:nth-of-type(11){
+    width:1.8rem;
+    height:1.8rem;
+    border-radius:50%;
+    top:42%;
+    left:35%;
+     -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+}
+.page:nth-of-type(1) > div > div:nth-of-type(1) {
+        position: absolute;
+        top: 40.4%;
+        left: 33%;
+    }
+#tu2 {
+    width: 2.1rem !important;
+    height: 2.1rem !important;
+    border-radius: 50% !important;
+    top: 45% !important;
+    left: 39% !important;
+    -moz-animation: xz 3s linear infinite !important;
+    -o-animation: xz 3s linear infinite !important;
+    -webkit-animation: xz 3s linear infinite !important;
+    animation: xz 3s linear infinite !important;
+    opacity: 1 !important;
+}
+#tu3,#tu4{
+    width:2.6rem;
+    height:2.6rem;
+    border-radius:50%;
+    top:37.8%;
+    left:29%;
+  
+}
+#tu4{
+    -moz-animation: xz 6s linear infinite !important;
+    -o-animation: xz 6s linear infinite !important;
+    -webkit-animation: xz 6s linear infinite !important;
+    animation: xz 6s linear infinite !important;
+     opacity: 1;
+    left:0%;
+    top:0;
+}
+#tu4_1 {
+    width: 2.6rem;
+    height: 2.6rem;
+    top: 37.8%;
+    left: 29%;
+    position: absolute;
+    -moz-perspective-origin: 0% 0%;
+    -ms-perspective-origin: 0% 0%;
+    -webkit-perspective-origin: 0% 0%;
+    perspective-origin: 0% 0%;
+    -moz-animation: zc 2s linear both;
+    -o-animation: zc 2s linear both;
+    -webkit-animation: zc 2s linear both;
+    animation: zc 2s linear both;
+}
+#tu5{
+    top: 37.5%;
+    left: 28%;
+     width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    position:absolute;
+    -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+}
+#tu5_1 {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    opacity:0;
+    left:0;
+    top:0;
+    -moz-animation: su 7s 3s linear both;
+    -o-animation: su 7s 3s linea both;
+    -webkit-animation: su 7s 3s linear both;
+    animation: su 7s 3s linear both;
+}
+#tu6 {
+    top: 34.3%;
+    left: 23%;
+    width: 3.3rem;
+    height: 3.3rem;
+    z-index: 80;
+    opacity: 0;
+    -moz-animation: km 2s 10s linear infinite;
+    -o-animation: km 2s 10s linear infinite;
+    -webkit-animation: km 2s 10s linear infinite;
+    animation: km 2s 10s linear infinite;
+}
+#tu7,#tu8{
+    width:2.46rem;
+    height:2.68rem;
+    bottom:-12%;
+     -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+}
+#tu7{
+    left:-15%;
+}
+#tu8 {
+    right: -15%;
+}
+.page:nth-of-type(1) span {
+    position: absolute;
+    font-size: 0.45rem;
+    font-weight: bold;
+    color: #ffffff;
+    opacity:0;
+    -moz-animation: zdy1 4s 4s linear both;
+    -o-animation: zdy1 4s 4s linear both;
+    -webkit-animation: zdy1 4s 4s linear both;
+    animation: zdy1 4s 4s linear both;
+}
+.page:nth-of-type(1) span:nth-of-type(1){
+    top:44%;
+    left:42%;
+}
+.page:nth-of-type(1) span:nth-of-type(2){
+    top:52%;
+    left:50%;
+}
+/*第二页*/
+.page:nth-of-type(2)>div>div{
+    position:absolute;
+}
+/*灯光*/
+.page:nth-of-type(2)>div> img:nth-of-type(1),.page:nth-of-type(3)>div> img:nth-of-type(1)
+,.page:nth-of-type(4)>div> img:nth-of-type(1),.page:nth-of-type(5)>div> img:nth-of-type(1)
+,.page:nth-of-type(6)>div> img:nth-of-type(1),.page:nth-of-type(7)>div> img:nth-of-type(1)
+,.page:nth-of-type(8)>div> img:nth-of-type(1){
+      width: 130%;
+        height: auto;
+        top: -25%;
+        left: -14%;
+        z-index: 2;
+        opacity:0;
+        -moz-animation: sd 1s 3s linear infinite;
+        -o-animation: sd 1s 3s linear infinite;
+        -webkit-animation: sd 1s 3s linear infinite;
+        animation: sd 1s 3s linear infinite;
+}/*灯光*/
+.page:nth-of-type(2)>div>img:nth-of-type(2){
+     width: 100%;
+        height: 100%;
+        -moz-animation: bgsd 3s linear both;
+        -o-animation: bgsd 3s linear both;
+        -webkit-animation: bgsd 3s linear both;
+        animation: bgsd 3s linear both;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(1) {
+    -moz-animation: yd_yd 2s linear;
+    -o-animation: yd_yd 2s linear;
+    -webkit-animation: yd_yd 2s linear;
+    animation: yd_yd 2s linear;
+    position:absolute;
+     top: 5%;
+    left: 37.95%;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(1)>img{
+    width: 1.5rem;
+    height: 1.5rem;
+     -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+   
+}
+.page:nth-of-type(2) img:nth-of-type(3){
+    width:1.45rem;
+    height:1.45rem;
+    top:5.4%;
+    left:38.7%;
+    opacity:0;
+     -moz-animation: km 2s 4s linear infinite;
+    -o-animation: km 2s 4s linear infinite;
+    -webkit-animation: km 2s 4s linear infinite;
+    animation: km 2s 4s linear infinite;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(2),.page:nth-of-type(2) img:nth-of-type(4){
+     width:1rem;
+    height:1rem;
+    left:2.8%;
+    top:35%;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(3),.page:nth-of-type(2) img:nth-of-type(5){
+     width:1rem;
+    height:1rem;
+    left:22.8%;
+    top:35%;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(4),.page:nth-of-type(2) img:nth-of-type(6){
+    width:1rem;
+    height:1rem;
+    left:42.8%;
+    top:35%;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(5),.page:nth-of-type(2) img:nth-of-type(7){
+ width:1rem;
+    height:1rem;
+    left:62.8%;
+    top:35%;
+}
+.page:nth-of-type(2)>div>div:nth-of-type(6),.page:nth-of-type(2) img:nth-of-type(8){
+ width:1rem;
+    height:1rem;
+    left:82.8%;
+    top:35%;
+}
+.page2{
+     -moz-animation: xz 5s linear infinite;
+        -o-animation: xz 5s linear infinite;
+        -webkit-animation: xz 5s linear infinite;
+        animation: xz 5s linear infinite;
+}
+.page2_zdy1 {
+    -moz-animation: page2_zdydh_1 2s linear;
+    -o-animation: page2_zdydh_1 2s linear;
+    -webkit-animation: page2_zdydh_1 2s linear;
+    animation: page2_zdydh_1 2s linear;
+}
+.page2_zdy2 {
+    -moz-animation: page2_zdydh_2 2s linear;
+    -o-animation: page2_zdydh_2 2s linear;
+    -webkit-animation: page2_zdydh_2 2s linear;
+    animation: page2_zdydh_2 2s linear;
+}
+.page2_zdy3 {
+    -moz-animation: page2_zdydh_3 2s linear;
+    -o-animation: page2_zdydh_3 2s linear;
+    -webkit-animation: page2_zdydh_3 2s linear;
+    animation: page2_zdydh_3 2s linear;
+}
+.page2_zdy4 {
+    -moz-animation: page2_zdydh_4 2s linear;
+    -o-animation: page2_zdydh_4 2s linear;
+    -webkit-animation: page2_zdydh_4 2s linear;
+    animation: page2_zdydh_4 2s linear;
+}
+.page2_zdy5 {
+    -moz-animation: page2_zdydh_5 2s linear;
+    -o-animation: page2_zdydh_5 2s linear;
+    -webkit-animation: page2_zdydh_5 2s linear;
+    animation: page2_zdydh_5 2s linear;
+}
+.page2_1 {
+    opacity: 0;
+    -moz-animation: km 2s 4s linear infinite;
+    -o-animation: km 2s 4s linear infinite;
+    -webkit-animation: km 2s 4s linear infinite;
+    animation: km 2s 4s linear infinite;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(7) {
+    width: 100%;
+    border: 0.02rem;
+    border-color: #00ffff;
+    border-style: dashed;
+    top: 45%;
+    -moz-animation: page2_fd 2s linear;
+    -o-animation: page2_fd 2s linear;
+    -webkit-animation: page2_fd 2s linear;
+    animation: page2_fd 2s linear;
+}
+.page2_xt {
+    height: 10%;
+    border-left: 0.02rem;
+    border-color: #00ffff;
+    border-style: solid;
+    top: 45%;
+    opacity:0;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(8){
+    left:10%;
+     -moz-animation: page2_sdx 2s 2s linear both;
+    -o-animation: page2_sdx 2s 2s linear both;
+    -webkit-animation: page2_sdx 2s 2s linear both;
+    animation: page2_sdx 2s 2s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(9){
+    left:30%;
+     -moz-animation: page2_sdx 2s 2.5s linear both;
+    -o-animation: page2_sdx 2s 2.5s linear both;
+    -webkit-animation: page2_sdx 2s 2.5s linear both;
+    animation: page2_sdx 2s 2.5s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(10){
+    left:50%;
+     -moz-animation: page2_sdx 2s 2.8s linear both;
+    -o-animation: page2_sdx 2s 2.8s linear both;
+    -webkit-animation: page2_sdx 2s 2.8s linear both;
+    animation: page2_sdx 2s 2.8s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(11){
+    left:70%;
+     -moz-animation: page2_sdx 2s 3s linear both;
+    -o-animation: page2_sdx 2s 3s linear both;
+    -webkit-animation: page2_sdx 2s 3s linear both;
+    animation: page2_sdx 2s 3s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(12){
+    left:90%;
+     -moz-animation: page2_sdx 2s 3.2s linear both;
+    -o-animation: page2_sdx 2s 3.2s linear both;
+    -webkit-animation: page2_sdx 2s 3.2s linear both;
+    animation: page2_sdx 2s 3.2s linear both;
+}
+.page2_text {
+    width: 0.4rem;
+    height: 1.5rem;
+    text-align: center;
+    writing-mode: tb-rl;
+    font-size: 0.3rem;
+    background-color: #00ffff;
+    color: #ffffff;
+    top: 56%;
+    border-radius: 4%;
+    padding-right: 0.02rem;
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    font-weight:bold;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(13){
+    left:7%;
+     -moz-animation: page2_xz 2s 3s linear both;
+    -o-animation: page2_xz 2s 3s linear both;
+    -webkit-animation: page2_xz 2s 3s linear both;
+    animation: page2_xz 2s 3s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(14){
+    left:27%;
+     -moz-animation: page2_xz 2s 3.5s linear both;
+    -o-animation: page2_xz 2s 3.5s linear both;
+    -webkit-animation: page2_xz 2s 3.5s linear both;
+    animation: page2_xz 2s 3.5s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(15){
+    left:47%;
+     -moz-animation: page2_xz 2s 3.8s linear both;
+    -o-animation: page2_xz 2s 3.8s linear both;
+    -webkit-animation: page2_xz 2s 3.8s linear both;
+    animation: page2_xz 2s 3.8s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(16){
+    left:67%;
+     -moz-animation: page2_xz 2s 4s linear both;
+    -o-animation: page2_xz 2s 4s linear both;
+    -webkit-animation: page2_xz 2s 4s linear both;
+    animation: page2_xz 2s 4s linear both;
+}
+.page:nth-of-type(2) > div > div:nth-of-type(17){
+    right:7%;
+     -moz-animation: page2_xz 2s 4.2s linear both;
+    -o-animation: page2_xz 2s 4.2s linear both;
+    -webkit-animation: page2_xz 2s 4.2s linear both;
+    animation: page2_xz 2s 4.2s linear both;
+}
+.page:nth-of-type(2) span{
+    position:absolute;
+    font-size:0.40rem;
+    color:#fff;
+    font-weight:bold;
+     -moz-animation: zdy1 4s 4s linear both;
+    -o-animation: zdy1 4s 4s linear both;
+    -webkit-animation: zdy1 4s 4s linear both;
+    animation: zdy1 4s 4s linear both;
+}
+.page:nth-of-type(2) span:nth-of-type(1){
+    top:10%;
+    left:43%;
+}
+.page:nth-of-type(2) span:nth-of-type(2){
+    left:9%;
+    top:37.5%;
+}
+.page:nth-of-type(2) span:nth-of-type(3){
+     top:37.5%;
+     left:29%;
+}
+.page:nth-of-type(2) span:nth-of-type(4){
+     top:37.5%;
+     left:49%;
+}
+.page:nth-of-type(2) span:nth-of-type(5){
+     top:37.5%;
+     left:69%;
+}
+.page:nth-of-type(2) span:nth-of-type(6){
+     top:37.5%;
+     right:8%;
+}
+/*第三页*/
+.page:nth-of-type(3),.page:nth-of-type(4) {
+    background-image: url('../img/bg.png');
+    background-size:cover;
+}
+.page:nth-of-type(3) img:nth-of-type(3){
+    width:2rem;
+    height:2rem;
+    left:35%;
+    top:10%;
+    opacity:0;
+     -moz-animation: xz 5s 2s linear infinite;
+        -o-animation: xz 5s 2s linear infinite;
+        -webkit-animation: xz 5s 2s linear infinite;
+        animation: xz 5s linear 2s infinite;
+}
+.page:nth-of-type(3) img:nth-of-type(4) {
+        width: 2rem;
+        height: 2rem;
+        left: 35%;
+        top: 10%;
+        -moz-animation: page3_fzxz 2s 2s linear infinite;
+        -o-animation: page3_fzxz 2s 2s linear infinite;
+        -webkit-animation: page3_fzxz 2s 2s linear infinite;
+        animation: page3_fzxz 2s linear 2s infinite;
+        opacity:0;
+    }
+.page:nth-of-type(3) img:nth-of-type(5) {
+        width: 2.5rem;
+        height: 2.5rem;
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        left: 31.5%;
+        top: 7.8%;
+        opacity: 0;
+        -moz-animation: page3_xz 3s 2s linear infinite;
+        -o-animation: page3_xz 3s 2s linear infinite;
+        -webkit-animation: page3_xz 3s 2s linear infinite;
+        animation: page3_xz 3s 2s linear infinite;
+    }
+.page:nth-of-type(3) img:nth-of-type(6) {
+        width: 2rem;
+        height: 2rem;
+        left: 35%;
+        top: 10%;
+        border-radius: 50%;
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+.page:nth-of-type(3)>div>div:nth-of-type(1){
+      width: 100%;
+    border: 0.02rem;
+    border-color: #00ffff;
+    border-style: dashed;
+    top: 35%;
+    -moz-animation: page2_fd 2s linear;
+    -o-animation: page2_fd 2s linear;
+    -webkit-animation: page2_fd 2s linear;
+    animation: page2_fd 2s linear;
+    position:absolute;
+}
+.page3_yuan {
+    width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 0.02rem solid;
+    border-color: #00ffff;
+    left: 10%;
+    opacity: 0;
+}
+.page3_tu1 {
+    width: 0.5rem;
+    height: 0.5rem;
+    left: 11.7%;
+    opacity:0;
+    -moz-animation: hid 2s 3s linear both;
+    -o-animation: hid 2s 3s linear both;
+    -webkit-animation: hid 2s 3s linear both;
+    animation: hid 2s 3s linear both;
+}
+.page:nth-of-type(3) img:nth-of-type(7){
+    top:41%;
+}
+.page:nth-of-type(3) img:nth-of-type(8){
+    top:51%;
+}
+.page:nth-of-type(3) img:nth-of-type(9){
+    top:61%;
+}
+.page:nth-of-type(3) img:nth-of-type(10){
+    top:71%;
+}
+.page:nth-of-type(3) img:nth-of-type(11){
+    top:81%;
+}
+.page:nth-of-type(3) > div > div:nth-of-type(2) {
+    top: 40%;
+    -moz-animation: page3_left 2s linear both;
+    -o-animation: page3_left 2s linear both;
+    -webkit-animation: page3_left 2s linear both;
+    animation: page3_left 2s linear both;
+}
+.page:nth-of-type(3)>div>div:nth-of-type(3){
+    top:50%;
+     -moz-animation: page3_left 2s 1s linear both;
+    -o-animation: page3_left 2s 1s linear both;
+    -webkit-animation: page3_left 2s 1s linear both;
+    animation: page3_left 2s 1s linear both;
+}
+.page:nth-of-type(3)>div>div:nth-of-type(4){
+    top:60%;
+     -moz-animation: page3_left 2s 1.5s linear both;
+    -o-animation: page3_left 2s 1.5s linear both;
+    -webkit-animation: page3_left 2s 1.5s linear both;
+    animation: page3_left 2s 1.5s linear both;
+}
+.page:nth-of-type(3)>div>div:nth-of-type(5){
+    top:70%;
+     -moz-animation: page3_left 2s 1.8s linear both;
+    -o-animation: page3_left 2s 1.8s linear both;
+    -webkit-animation: page3_left 2s 1.8s linear both;
+    animation: page3_left 2s 1.8s linear both;
+}
+.page:nth-of-type(3)>div>div:nth-of-type(6){
+    top:80%;
+     -moz-animation: page3_left 2s 2s linear both;
+    -o-animation: page3_left 2s 2s linear both;
+    -webkit-animation: page3_left 2s 2s linear both;
+    animation: page3_left 2s 2s linear both;
+}
+.page3_zjs{
+    width:70%;
+    border-bottom:0.02rem solid;
+    border-color:#00ffff;
+    position:absolute;
+    left:30%;
+    opacity:0;
+}
+.page:nth-of-type(3) h1{
+    font-size:0.30rem;
+    color:aqua;
+}
+.page3_zjs span{
+    color:#ffffff;
+}
+.page:nth-of-type(3) > div > div:nth-of-type(7) {
+    top: 42%;
+    -moz-animation: page3_right 2s 2s linear both;
+    -o-animation: page3_right 2s 2s linear both;
+    -webkit-animation: page3_right 2s 2s linear both;
+    animation: page3_right 2s 2s linear both;
+}
+.page:nth-of-type(3) > div > div:nth-of-type(8) {
+    top: 52%;
+    -moz-animation: page3_right 2s 2.5s linear both;
+    -o-animation: page3_right 2s 2.5s linear both;
+    -webkit-animation: page3_right 2s 2.5s linear both;
+    animation: page3_right 2s 2.5s linear both;
+}
+.page:nth-of-type(3) > div > div:nth-of-type(9) {
+    top: 62%;
+    -moz-animation: page3_right 2s 3s linear both;
+    -o-animation: page3_right 2s 3s linear both;
+    -webkit-animation: page3_right 2s 3s linear both;
+    animation: page3_right 2s 3s linear both;
+}
+.page:nth-of-type(3) > div > div:nth-of-type(10) {
+    top: 72%;
+    -moz-animation: page3_right 2s 3.5s linear both;
+    -o-animation: page3_right 2s 3.5s linear both;
+    -webkit-animation: page3_right 2s 3.5s linear both;
+    animation: page3_right 2s 3.5s linear both;
+}
+.page:nth-of-type(3) > div > div:nth-of-type(11) {
+    top: 82%;
+    -moz-animation: page3_right 2s 4s linear both;
+    -o-animation: page3_right 2s 4s linear both;
+    -webkit-animation: page3_right 2s 4s linear both;
+    animation: page3_right 2s 4s linear both;
+}
+/*第四页*/
+/*通用的数字*/
+.page:nth-of-type(4)>div>div:nth-of-type(1),.page:nth-of-type(5)>div>div:nth-of-type(1)
+,.page:nth-of-type(6)>div>div:nth-of-type(1),.page:nth-of-type(7)>div>div:nth-of-type(1){
+    width:0.8rem;
+    height:0.8rem;
+    background-color:aqua;
+    text-align:center;
+    line-height:0.8rem;
+    font-size:0.45rem;
+    position:absolute;
+    color:#fff;
+    border-radius:50%;
+    left:12%;
+    top:12%;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(3),.page:nth-of-type(5) > div > img:nth-of-type(3)
+,.page:nth-of-type(6) > div > img:nth-of-type(3),.page:nth-of-type(7) > div > img:nth-of-type(3) {
+    width: 1rem;
+    height: 1rem;
+    left: 10%;
+    top: 11%;
+    opacity: 0;
+    -moz-animation: xz 5s 2s linear infinite;
+    -o-animation: xz 5s 2s linear infinite;
+    -webkit-animation: xz 5s 2s linear infinite;
+    animation: xz 5s linear 2s infinite;
+}
+.page:nth-of-type(4) span:nth-of-type(1),.page:nth-of-type(5) span:nth-of-type(1)
+,.page:nth-of-type(6) span:nth-of-type(1),.page:nth-of-type(7) span:nth-of-type(1) {
+    color: #00ffff;
+    position: absolute;
+    font-size: 0.40rem;
+    left: 40%;
+    top: 14%;
+    -moz-animation: hid 5s linear;
+    -o-animation: hid 5s linear;
+    -webkit-animation: hid 5s linear;
+    animation: hid 5s linear;
+}
+.page:nth-of-type(4)>div>div:nth-of-type(2),.page:nth-of-type(5)>div>div:nth-of-type(2)
+,.page:nth-of-type(6)>div>div:nth-of-type(2)
+,.page:nth-of-type(7)>div>div:nth-of-type(2){
+     width: 100%;
+    border: 0.02rem;
+    border-color: #00ffff;
+    border-style: dashed;
+    top: 35%;
+    position:absolute;
+    -moz-animation: page2_fd 2s linear;
+    -o-animation: page2_fd 2s linear;
+    -webkit-animation: page2_fd 2s linear;
+    animation: page2_fd 2s linear;
+}
+/*以上是样式简写段*/
+.page:nth-of-type(4) > div > img:nth-of-type(4){
+    width:2rem;
+    height:2rem;
+    top:55%;
+    left:35%;
+     -moz-animation: xz 5s 2s linear infinite;
+    -o-animation: xz 5s 2s linear infinite;
+    -webkit-animation: xz 5s 2s linear infinite;
+    animation: xz 5s linear 2s infinite;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(5) {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 58%;
+    left: 39%;
+    opacity: 0;
+    -moz-animation: fz 5s 3s linear infinite;
+    -o-animation: fz 5s 3s linear infinite;
+    -webkit-animation: fz 5s 3s linear infinite;
+    animation: fz 5s 3s linear infinite;
+}
+.page4_1{
+    width:0.7rem;
+    height:0.7rem;
+     -moz-animation: xz 5s 2s linear infinite;
+    -o-animation: xz 5s 2s linear infinite;
+    -webkit-animation: xz 5s 2s linear infinite;
+    animation: xz 5s linear 2s infinite;
+    opacity:0;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(6){
+    left:30%;
+    top:52%;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(7){
+    right:30%;
+    top:52%;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(8){
+    left:30%;
+    top:70%;
+}
+ .page:nth-of-type(4) > div > img:nth-of-type(9){
+    right:30%;
+    top:70%;
+}
+.page4_2 {
+    width: 0.3rem;
+    height: 0.3rem;
+    opacity:0;
+    -moz-animation: hid 2s 3s linear both;
+    -o-animation: hid 2s 3s linear both;
+    -webkit-animation: hid 2s 3s linear both;
+    animation: hid 2s 3s linear both;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(10){
+    top:54%;
+    left:62.5%;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(11){
+    top:54%;
+    left:33%;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(12){
+    top:72%;
+    left:62.5%;
+}
+.page:nth-of-type(4) > div > img:nth-of-type(13){
+    top:72%;
+    left:33%;
+}
+.sp1{
+    font-size:0.3rem;
+    color:#00ffff;
+    position:absolute;
+    opacity:0;
+}
+.page:nth-of-type(4) span:nth-of-type(2) {
+    top: 45%;
+    left: 5%;
+    -moz-animation: page_4_le 2s 3s linear both;
+    -o-animation: page_4_le 2s 3s linear both;
+    -webkit-animation: page_4_le 2s 3s linear both;
+    animation: page_4_le 2s 3s linear both;
+}
+.page:nth-of-type(4) span:nth-of-type(3) {
+    top: 45%;
+    right: 5%;
+    -moz-animation: page_5_ri 2s 3s linear both;
+    -o-animation: page_5_ri 2s 3s linear both;
+    -webkit-animation: page_5_ri 2s 3s linear both;
+    animation: page_5_ri 2s 3s linear both;
+}
+.page:nth-of-type(4) span:nth-of-type(4){
+    top:75%;
+    left:5%;
+     -moz-animation: page_4_le 2s 3s linear both;
+    -o-animation: page_4_le 2s 3s linear both;
+    -webkit-animation: page_4_le 2s 3s linear both;
+    animation: page_4_le 2s 3s linear both;
+}
+.page:nth-of-type(4) span:nth-of-type(5){
+    top:75%;
+    right:5%;
+    -moz-animation: page_5_ri 2s 3s linear both;
+    -o-animation: page_5_ri 2s 3s linear both;
+    -webkit-animation: page_5_ri 2s 3s linear both;
+    animation: page_5_ri 2s 3s linear both;
+}
+.page_4p{
+    font-size:0.2rem;
+    color:#fff;
+    position:absolute;
+    opacity:0;
+}
+.page:nth-of-type(4) p:nth-of-type(1) {
+    top: 50%;
+    left: 3%;
+    -moz-animation: page4_up1 2s 3s linear both;
+    -o-animation: page4_up1 2s 3s linear both;
+    -webkit-animation: page4_up1 2s 3s linear both;
+    animation: page4_up1 2s 3s linear both;
+}
+.page:nth-of-type(4) p:nth-of-type(2){
+    top:50%;
+    right:3%;
+    -moz-animation: page4_up1 2s 3s linear both;
+    -o-animation: page4_up1 2s 3s linear both;
+    -webkit-animation: page4_up1 2s 3s linear both;
+    animation: page4_up1 2s 3s linear both;
+}
+.page:nth-of-type(4) p:nth-of-type(3) {
+    top: 80%;
+    left: 3%;
+    -moz-animation: page4_up2 2s 3s linear both;
+    -o-animation: page4_up2 2s 3s linear both;
+    -webkit-animation: page4_up2 2s 3s linear both;
+    animation: page4_up2 2s 3s linear both;
+}
+.page:nth-of-type(4) p:nth-of-type(4){
+    top:80%;
+    right:3%;
+    -moz-animation: page4_up2 2s 3s linear both;
+    -o-animation: page4_up2 2s 3s linear both;
+    -webkit-animation: page4_up2 2s 3s linear both;
+    animation: page4_up2 2s 3s linear both;
+}
+/*第5页*/
+.page5_s{
+    font-size:0.35rem;
+    color:aqua;
+    position:absolute;
+    left:10%;
+    opacity:0;
+}
+.page5_s a{
+    font-size:0.25rem;
+    color:#ffffff!important;
+    display:inline-block;
+}
+.page:nth-of-type(5) span:nth-of-type(2) {
+    top: 50%;
+    -moz-animation: page5_sf 2s  linear both;
+    -o-animation: page5_sf 2s  linear both;
+    -webkit-animation: page5_sf 2s  linear both;
+    animation: page5_sf 2s  linear both;
+}
+.page:nth-of-type(5) span:nth-of-type(3) {
+    top: 60%;
+    -moz-animation: page5_sf 2s 2s linear both;
+    -o-animation: page5_sf 2s 2s linear both;
+    -webkit-animation: page5_sf 2s 2s linear both;
+    animation: page5_sf 2s 2s linear both;
+}
+.page:nth-of-type(5) span:nth-of-type(4) {
+    top: 70%;
+    -moz-animation: page5_sf 2s 4s linear both;
+    -o-animation: page5_sf 2s 4s linear both;
+    -webkit-animation: page5_sf 2s 4s linear both;
+    animation: page5_sf 2s 4s linear both;
+}
+/*第六页*/
+.page6_1{
+    width:1.5rem;
+    height:1.5rem;
+   opacity:0;
+   z-index:10;
+}
+.page6_2{
+     width:0.5rem;
+    height:0.5rem;
+}
+.page6_3{
+    width:1.5rem;
+    height:1.5rem;
+    background-color:#00ffff;
+     position:absolute;
+}
+.page:nth-of-type(6) > div > div:nth-of-type(3) {
+    top: 45%;
+    left: 27%;
+    -moz-animation: hid 2s 3s linear both;
+    -o-animation: hid 2s 3s linear both;
+    -webkit-animation: hid 2s 3s linear both;
+    animation: hid 2s 3s linear both;
+}
+.page:nth-of-type(6) > div > div:nth-of-type(4) {
+    top: 60%;
+    right: 27%;
+    -moz-animation: hid 2s 3.5s linear both;
+    -o-animation: hid 2s 3.5s linear both;
+    -webkit-animation: hid 2s 3.5s linear both;
+    animation: hid 2s 3.5s linear both;
+}
+.page:nth-of-type(6) > div > div:nth-of-type(5) {
+    top: 75%;
+    left: 27%;
+    -moz-animation: hid 2s 4s linear both;
+    -o-animation: hid 2s 4s linear both;
+    -webkit-animation: hid 2s 4s linear both;
+    animation: hid 2s 4s linear both;
+}
+.page:nth-of-type(6) img:nth-of-type(4) {
+    top: 50%;
+    left: 35%;
+    -moz-animation: page5_lf 2s 2s linear both;
+    -o-animation: page5_lf 2s 2s linear both;
+    -webkit-animation: page5_lf 2s 2s linear both;
+    animation: page5_lf 2s 2s linear both;
+}
+.page:nth-of-type(6) img:nth-of-type(5) {
+    right: 35%;
+    top: 65%;
+    -moz-animation: page5_ri 2s 2s linear both;
+    -o-animation: page5_ri 2s 2s linear both;
+    -webkit-animation: page5_ri 2s 2s linear both;
+    animation: page5_ri 2s 2s linear both;
+}
+.page:nth-of-type(6) img:nth-of-type(6){
+     left:35%;
+     top:80%;
+      -moz-animation: page5_lf 2s 2s linear both;
+    -o-animation: page5_lf 2s 2s linear both;
+    -webkit-animation: page5_lf 2s 2s linear both;
+    animation: page5_lf 2s 2s linear both;
+}
+.page:nth-of-type(6) img:nth-of-type(7) {
+    top: 45%;
+    right: 27%;
+    -moz-animation: hid 2s 2s linear both;
+    -o-animation: hid 2s 2s linear both;
+    -webkit-animation: hid 2s 2s linear both;
+    animation: hid 2s 2s linear both;
+}
+.page:nth-of-type(6) img:nth-of-type(8) {
+    top: 60%;
+    left: 27%;
+    -moz-animation: hid 2s 2.5s linear both;
+    -o-animation: hid 2s 2.5s linear both;
+    -webkit-animation: hid 2s 2.5s linear both;
+    animation: hid 2s 2.5s linear both;
+}
+.page:nth-of-type(6) img:nth-of-type(9) {
+    top: 75%;
+    right: 27%;
+    -moz-animation: hid 2s 3s linear both;
+    -o-animation: hid 2s 3s linear both;
+    -webkit-animation: hid 2s 3s linear both;
+    animation: hid 2s 3s linear both;
+}
+/*第7页*/
+.page7_1{
+    width:8%;
+    height:5%; 
+    top:40%;
+    opacity:0;
+}
+.page:nth-of-type(7) img:nth-of-type(4), .page:nth-of-type(7) img:nth-of-type(17) {
+    left: 8%;
+    -moz-animation: hid 2s 2s linear both;
+    -o-animation: hid 2s 2s linear both;
+    -webkit-animation: hid 2s 2s linear both;
+    animation: hid 2s 2s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(5),.page:nth-of-type(7) img:nth-of-type(18){
+    left:18%;
+     -moz-animation: hid 2s 2.2s linear both;
+    -o-animation: hid 2s 2.2s linear both;
+    -webkit-animation: hid 2s 2.2s linear both;
+    animation: hid 2s 2.2s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(6),.page:nth-of-type(7) img:nth-of-type(19){
+    left:28%;
+     -moz-animation: hid 2s 2.4s linear both;
+    -o-animation: hid 2s 2.4s linear both;
+    -webkit-animation: hid 2s 2.4s linear both;
+    animation: hid 2s 2.4s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(7),.page:nth-of-type(7) img:nth-of-type(20){
+    left:38%;
+     -moz-animation: hid 2s 2.6s linear both;
+    -o-animation: hid 2s 2.6s linear both;
+    -webkit-animation: hid 2s 2.6s linear both;
+    animation: hid 2s 2.6s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(8),.page:nth-of-type(7) img:nth-of-type(21){
+    left:48%;
+     -moz-animation: hid 2s 2.8s linear both;
+    -o-animation: hid 2s 2.8s linear both;
+    -webkit-animation: hid 2s 2.8s linear both;
+    animation: hid 2s 2.8s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(9),.page:nth-of-type(7) img:nth-of-type(22){
+    left :58%;
+     -moz-animation: hid 2s 3s linear both;
+    -o-animation: hid 2s 3s linear both;
+    -webkit-animation: hid 2s 3s linear both;
+    animation: hid 2s 3s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(10),.page:nth-of-type(7) img:nth-of-type(23){
+    left:68%;
+     -moz-animation: hid 2s 3.2s linear both;
+    -o-animation: hid 2s 3.2s linear both;
+    -webkit-animation: hid 2s 3.2s linear both;
+    animation: hid 2s 3.2s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(11),.page:nth-of-type(7) img:nth-of-type(24){
+    left:78%;
+     -moz-animation: hid 2s 3.4s linear both;
+    -o-animation: hid 2s 3.4s linear both;
+    -webkit-animation: hid 2s 3.4s linear both;
+    animation: hid 2s 3.4s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(12),.page:nth-of-type(7) img:nth-of-type(25){
+    left:88%;
+     -moz-animation: hid 2s 3.6s linear both;
+    -o-animation: hid 2s 3.6s linear both;
+    -webkit-animation: hid 2s 3.6s linear both;
+    animation: hid 2s 3.6s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(13){
+    left:8%;
+    top:47%;
+     -moz-animation: hid 2s 3.8s linear both;
+    -o-animation: hid 2s 3.8s linear both;
+    -webkit-animation: hid 2s 3.8s linear both;
+    animation: hid 2s 3.8s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(14){
+    left:8%;
+    top:54%;
+     -moz-animation: hid 2s 4s linear both;
+    -o-animation: hid 2s 4s linear both;
+    -webkit-animation: hid 2s 4s linear both;
+    animation: hid 2s 4s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(15){
+    left:8%;
+}
+.page:nth-of-type(7) img:nth-of-type(16){
+    left:8%;
+}
+.px{
+    top:90%;
+}
+.page:nth-of-type(7) img:nth-of-type(26){
+    right:4%;
+    top:83%;
+     -moz-animation: hid 2s 3.8s linear both;
+    -o-animation: hid 2s 3.8s linear both;
+    -webkit-animation: hid 2s 3.8s linear both;
+    animation: hid 2s 3.8s linear both;
+}
+.page:nth-of-type(7) img:nth-of-type(27){
+    right:4%;
+    top:76%;
+     -moz-animation: hid 2s 4s linear both;
+    -o-animation: hid 2s 4s linear both;
+    -webkit-animation: hid 2s 4s linear both;
+    animation: hid 2s 4s linear both;
+}
+.page:nth-of-type(7) p{
+    font-size:0.20rem;
+    color:#fff;
+    width:60%;
+    position:absolute;
+    top:50%;
+    left:20%;
+    line-height:0.4rem;
+     -moz-animation: hid 2s 4s linear both;
+    -o-animation: hid 2s 4s linear both;
+    -webkit-animation: hid 2s 4s linear both;
+    animation: hid 2s 4s linear both;
+}
+/*第八页*/
+.page:nth-of-type(8) span:nth-of-type(1){
+    font-size:0.30rem;
+    color:#fff;
+    position:absolute;
+    left:25%;
+    top:15%;
+}
+.page:nth-of-type(8) img:nth-of-type(3){
+    width:40%;
+    height:30%;
+    top:20%;
+    left:30%;
+}
+.page:nth-of-type(8) span:nth-of-type(2){
+    position:absolute;
+    top:55%;
+    left:25%;
+    color:#ffffff;
+    font-size:0.30rem;
+}
+.page:nth-of-type(8) a:nth-of-type(1){
+    color:#ff0000;
+    font-size:0.30rem;
+    position:absolute;
+    top:58%;
+    left:28%;
+}
+.page:nth-of-type(8) img:nth-of-type(4) {
+    width: 25%;
+    height: 10%;
+    bottom: 10%;
+    left: 37.5%;
+    -moz-animation: hid1 0.8s linear infinite,de_9 0.8s linear infinite;
+    -o-animation: hid1 0.8s linear infinite,de_9 0.8s linear infinite;
+    -webkit-animation: hid1 0.8s linear infinite,de_9 0.8s linear infinite;
+    animation: hid1 0.8s linear infinite,de_9 0.8s linear infinite;
+}
+.page:nth-of-type(8) a:nth-of-type(2){
+     color:#ff0000;
+    font-size:0.18rem;
+    position:absolute;
+    bottom:15%;
+    left:42%;
+    z-index:888;
+}
+canvas {
+    -moz-transform: scale();
+    -ms-transform: scale();
+    -o-transform: scale();
+    -webkit-transform: scale();
+    transform: scale();
+}
